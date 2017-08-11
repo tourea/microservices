@@ -1,0 +1,25 @@
+# IntelliJ
+.idea/
+
+# Configured gradle output and cache directories
+.gradle/
+gradle-build/
+
+maven-lib/
+maven-lib-src/
+
+# Maven default output directory
+target/
+
+.project
+.classpath
+.settings/
+*.iml
+*.eml
+.*.swp
+*.ipr
+*.iws
+*.orig
+
+# OS X noise
+.DS_Store
