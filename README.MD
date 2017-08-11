@@ -4,6 +4,7 @@ The goal for this project is to implement the Microservice Architecture for educ
 
 The service that is implemented has the following functionalities:
 * Scan files for vulnerabilities
+* Scan URLs for vulnerabilities
 
 These functionalities will be extended as the project evolves
 
@@ -11,5 +12,5 @@ These functionalities will be extended as the project evolves
 
 | METHOD | PATH | DESCRIPTION |
 | ------ |----- |-------------|
-| GET | /fileScan/file | Scan a file given its path for vulnerabilities |
-| GET | /fileScan/md5 | Check MD5 hash for vulnerabilities |
+| GET | /fileScan/file | Scan a file for vulnerabilities |
+| GET | /fileScan/md5 | Check a MD5 hash for vulnerabilities |
