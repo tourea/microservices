@@ -11,5 +11,5 @@ These functionalities will be extended as the project evolves
 
 | METHOD | PATH | DESCRIPTION |
 | ------ |----- |-------------|
-| GET | /scan/file/ | Scan a file given its path for vulnerabilities |
-| GET | /check/md5 | Check MD5 hash for vulnerabilities |
+| GET | /fileScan/file | Scan a file given its path for vulnerabilities |
+| GET | /fileScan/md5 | Check MD5 hash for vulnerabilities |

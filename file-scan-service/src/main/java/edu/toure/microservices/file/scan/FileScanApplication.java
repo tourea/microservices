@@ -14,14 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class FileScanApplication {
 
-  static final String API_VERSION = "/api/v1/";
-
-  @RequestMapping(value = API_VERSION + "scan/file")
+  @RequestMapping(value = "/file")
   public String scanFile() {
     return "path";
   }
 
-  @RequestMapping(value = API_VERSION + "/check/md5")
+  @RequestMapping(value = "/md5")
   public String checkMd5() {
     return "md5";
   }
