@@ -1,0 +1,39 @@
+digraph architecture {
+  rankdir=LR;
+  
+  // Storage - #303F9F (dark blue)
+  node[fillcolor="#303F9F" style="filled" fontcolor="white"];
+  database[label="DB"]; 
+  cache[label="cache"];
+  logging[label="logging"];
+  
+  // Client-side Apps - #FFCCBC (light orange)
+  node[fillcolor="#FFCCBC" style="filled" fontcolor="black"];
+  ui[label="UI"];
+  
+  // Microservices - #C8E6C9 (light green)
+  node[fillcolor="#C8E6C9" style="filled" fontcolor="black"];
+  file_service[label="file_service"]; 
+  ip_service[label="ip_service"]; 
+  reports_service[label="reports_service"];
+
+  subgraph client_side_apps {
+      ui -> {api_gateway};
+      
+      {rank=same; ui};
+  }
+  
+  subgraph api_gateways {
+      api_gateway -> {logging} [arrowhead=obox];
+      api_gateway -> {file_service, ip_service, reports_service};
+  }
+  
+  subgraph microservices {
+      file_service -> {reports_service, logging} [arrowhead=obox];
+      file_service -> cache;
+      ip_service -> {reports_service, logging} [arrowhead=obox];
+      ip_service -> cache;
+      reports_service -> logging [arrowhead=obox];
+      reports_service -> database;
+  }
+}

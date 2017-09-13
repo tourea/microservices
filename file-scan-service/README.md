@@ -1,7 +1,6 @@
 # file-scan #
 
-The file-scan service has the following functionalities:
-* It can scan files for vulnerabilities
+The file-scan service scans files for vulnerabilities
 
 These functionalities will be extended as the project evolves
 
