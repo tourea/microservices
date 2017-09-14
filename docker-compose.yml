@@ -1,0 +1,11 @@
+version: '3'
+services:
+  api-gateway:
+    build: api-gateway
+    ports:
+      - 8080:8080
+
+  file-scan-service:
+    build: file-scan-service
+    ports:
+      - 8081:8081

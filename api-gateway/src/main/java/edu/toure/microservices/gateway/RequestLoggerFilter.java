@@ -1,4 +1,4 @@
-package edu.toure.microservices;
+package edu.toure.microservices.gateway;
 
 import javax.servlet.http.HttpServletRequest;
 

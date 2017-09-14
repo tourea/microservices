@@ -10,6 +10,7 @@ maven-lib-src/
 
 # Maven default output directory
 target/
+classes/
 
 .project
 .classpath

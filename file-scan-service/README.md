@@ -4,6 +4,14 @@ The file-scan service scans files for vulnerabilities
 
 These functionalities will be extended as the project evolves
 
+## Building
+```./gradlew build```
+
+```docker build -t file-scan:1.0-SNAPSHOT .```
+
+## Running
+```docker run -p 8081:8081 file-scan:1.0-SNAPSHOT```
+
 ## API ##  
 
 | METHOD | PATH | DESCRIPTION |
