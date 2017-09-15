@@ -1,5 +1,7 @@
 package edu.toure.microservices.file.scan.service;
 
+import org.springframework.stereotype.Service;
+
 import com.google.gson.Gson;
 
 /**
@@ -7,6 +9,7 @@ import com.google.gson.Gson;
  *
  * @author touré
  */
+@Service
 public class FileScanService {
 
   private final Gson gson;

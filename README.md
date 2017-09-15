@@ -8,14 +8,15 @@ The following is a list of some of the concepts that will be implemented:
 * API gateways (Netflix Zuul reverse proxy)
 * Centralized configuration
 * Deployment (Docker)
-* Synchronous & Asynchronous integration (REST, Kafka)
+* Synchronous & Asynchronous integration (REST, Kafka or RabbitMQ)
 * Load balancer
 * Service discovery (Netflix Eureka)
 * Fault tolerance (Netflix Hystrix)
 * Monitoring (Netflix Hystrix)
 * Security (Netflix Zuul)
 * Distributed caching (Redis)
-* NoSQL database
+* NoSQL database (MongoDB)
+* Centralized Logging
 * ...
 
 ## Service
@@ -30,5 +31,4 @@ These functionalities will be extended as the project evolves.
 
 ## Running
 To start all services:
-* run ```./gradlew build``` within each service
-* run ```docker-compose up```
+* run ```./dev.sh```

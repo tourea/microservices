@@ -1,0 +1,11 @@
+ribbon:
+  eureka:
+    enabled: false
+
+zuul:
+  routes:
+    file:
+        url: http://file-service:8081/api/v1/
+
+server:
+  port: 8080

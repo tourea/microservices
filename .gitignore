@@ -25,5 +25,4 @@ classes/
 # OS X noise
 .DS_Store
 
-api-gateway/build
-file-scan-service/build/
+**/build/

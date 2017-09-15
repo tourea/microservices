@@ -17,17 +17,17 @@ import edu.toure.microservices.file.scan.service.FileScanService;
 @SpringBootApplication
 public class FileScanApplication {
 
-  static final String API_VERSION_1 = "/api/v1/";
+  private static final String API_VERSION_1 = "/api/v1/";
 
   @Autowired
   private FileScanService service;
 
-  @RequestMapping(value = API_VERSION_1 + "/file")
+  @RequestMapping(value = API_VERSION_1 + "/scan")
   public String scan() {
     return service.scan(/*file*/);
   }
 
-  @RequestMapping(value = API_VERSION_1 + "/md5")
+  @RequestMapping(value = API_VERSION_1 + "/check")
   public String check() {
     return service.check(/*md5*/);
   }
