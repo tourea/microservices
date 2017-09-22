@@ -14,7 +14,7 @@ services:
         condition: service_healthy
 
   file-service:
-    build: file-scan-service
+    build: file-service
     ports:
       - 8081:8081
     depends_on:

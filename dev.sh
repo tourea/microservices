@@ -8,7 +8,7 @@ set -e
 declare -a services=(
   "config"
   "api-gateway"
-  "file-scan-service"
+  "file-service"
   )
 
 echo "Step 1/3: Removing existing images"

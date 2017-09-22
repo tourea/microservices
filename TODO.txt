@@ -1,4 +1,1 @@
-- Make docker-compose work
-- Move ports config to services
-- rename file-scan-service file-service
 - Update spring-cloud version
