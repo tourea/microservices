@@ -1,6 +1,6 @@
 ribbon:
-  eureka:
-    enabled: false
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
 
 zuul:
   routes:

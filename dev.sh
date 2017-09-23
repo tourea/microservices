@@ -7,6 +7,7 @@ set -e
 
 declare -a services=(
   "config"
+  "service-registry"
   "api-gateway"
   "file-service"
   )

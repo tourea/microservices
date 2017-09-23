@@ -3,16 +3,24 @@
 digraph architecture {
   rankdir=LR;
   
-  // storage & config - #303F9F (dark blue)
+  // cloud services - #A233FF (purple)
+  node[fillcolor="#A233FF" style="filled" fontcolor="white"];
+  config[label="config"]; 
+  registry[label="registry"];
+  
+  // utility services - #303F9F (dark blue)
   node[fillcolor="#303F9F" style="filled" fontcolor="white"];
   database[label="DB"]; 
   cache[label="cache"];
   logging[label="logging"];
-  config[label="config"];
 
   // client-side Apps - #FFCCBC (light orange)
   node[fillcolor="#FFCCBC" style="filled" fontcolor="black"];
   ui[label="UI"];
+
+  // api gate way - #FFE333 (dark yellow)
+  node[fillcolor="#FFE333" style="filled" fontcolor="black"];
+  api_gateway[label="api_gateway"]
 
   // microservices - #C8E6C9 (light green)
   node[fillcolor="#C8E6C9" style="filled" fontcolor="black"];
@@ -27,15 +35,15 @@ digraph architecture {
   
   subgraph api_gateways {
       api_gateway -> {logging} [arrowhead=obox];
-      api_gateway -> {file_service, ip_service, reports_service};
+      api_gateway -> {config, registry, file_service, ip_service, reports_service};
   }
   
   subgraph microservices {
       file_service -> {reports_service, logging} [arrowhead=obox];
-      file_service -> {config, cache};
+      file_service -> {config, registry, cache};
       ip_service -> {reports_service, logging} [arrowhead=obox];
-      ip_service -> {config, cache};
+      ip_service -> {config, registry, cache};
       reports_service -> logging [arrowhead=obox];
-      reports_service -> database;
+      reports_service -> {config, registry, database};
   }
 }

@@ -5,6 +5,14 @@ services:
     ports:
       - 8888:8888
 
+  service-registry:
+    build: service-registry
+    ports:
+      - 8761:8761
+    depends_on:
+      config:
+        condition: service_healthy
+
   api-gateway:
     build: api-gateway
     ports:
