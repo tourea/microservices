@@ -32,3 +32,14 @@ These functionalities will be extended as the project evolves.
 ## Running
 To start all services:
 * run ```./dev.sh```
+
+## Management Endpoints
+
+| Endpoint | Description |
+| -------- | ------------|
+| http://localhost:8888/health | Configuration Server |
+| http://localhost:8080/ | API Gateway |
+| http://localhost:15672/ | RabbitMq Management (username/password: guest/guest) |
+| http://localhost:8761 | Discovery Service Dashboard |
+| http://localhost:8989 | Turbine stream |
+| http://localhost:9000/hystrix | Hystrix Dashboard (Turbine Stream: http://monitoring:8989) |

@@ -1,5 +1,11 @@
 version: '2.1'
 services:
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - 5672:5672
+      - 15672:15672
+
   config:
     build: config
     ports:
@@ -18,13 +24,22 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      config:
+      service-registry:
         condition: service_healthy
 
   file-service:
     build: file-service
     ports:
       - 8081:8081
+    depends_on:
+      service-registry:
+        condition: service_healthy
+
+  monitoring:
+    build: monitoring
+    ports:
+      - 9000:8080
+      - 8989:8989
     depends_on:
       config:
         condition: service_healthy
